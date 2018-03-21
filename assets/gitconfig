@@ -1,0 +1,44 @@
+[credential]
+	helper = osxkeychain
+[push]
+	default = simple
+[user]
+	name = James Quintana
+	email = q@world.oberlin.edu
+
+[merge]
+	tool = vimdiff
+
+[alias]
+	st = status
+	di = diff
+	co = checkout
+	br = branch
+	unstage = reset HEAD
+	ta = stash
+	dc = diff --cached
+	cm = duet-commit -m
+	cv = duet-commit -v
+	ap = add -p
+	ci = duet-commit
+	cp = cherry-pick
+	an = add -N
+	glob = "!sh -c 'git add -p `git ls-files -m -o --exclude-standard | grep $1`' -"
+	clonehub = "!sh -c 'git clone git@github.com:$1.git' -"
+	nuke-branch = "!sh -c 'git branch -D $1 && git push origin --delete $1' -"
+	mq = "!sh -c 'git merge --squash $1 && git duet-commit -v' -"
+	cam = duet-commit --amend -m
+
+
+[core]
+	editor = nvim
+[duet "env"]
+	git-author-initials = eve
+	git-author-name = J Evelyn Quintana
+	git-author-email = q@world.oberlin.edu
+	mtime = 1513050490
+[push]
+	default = simple
+[url "git@github.com:"]
+	pushInsteadOf = https://github.com/
+	pushInsteadOf = git://github.com/
