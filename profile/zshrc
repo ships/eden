@@ -10,7 +10,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 
-ls -d1 $HOME/.eden-profile/sources/* | while read document
+ls -d1 $HOME/.eden_profile/sources/* | while read document
 do
   source $document
 done
