@@ -34,6 +34,7 @@ ruby
 ruby-install
 swiftenv
 tig
+tmux
 watch
 xctool
 zsh
