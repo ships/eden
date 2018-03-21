@@ -29,6 +29,7 @@ openvpn
 postgresql
 python3
 python@2
+ripgrep
 ruby
 ruby-install
 swiftenv

@@ -1,0 +1,6 @@
+if [[ -f $1 ]]; then
+  nvim $1
+  return 0
+else
+  return 1
+fi

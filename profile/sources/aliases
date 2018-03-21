@@ -1,0 +1,8 @@
+alias l1='ls -1'
+alias ...='cd ../..'
+alias ..='cd ..'
+alias cl='cd ~ && clear'
+alias xcodeclean="rm -frd ~/Library/Developer/Xcode/DerivedData/* && rm -frd ~/Library/Caches/com.apple.dt.Xcode/*"
+alias ci='fly -t ci'
+alias be='bundle exec'
+
