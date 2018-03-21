@@ -4,7 +4,7 @@ set -euxo pipefail
 repo_root="$(cd `dirname $0`/.. && pwd )"
 
 ln -s "$repo_root/profile/zshrc" ~/.zshrc
-ln -s "$repo_root/profile" ~/.eden_profile
+ln -s "$repo_root/profile" ~/.eden/profile
 
 open $repo_root/assets/hybrid.itermcolors
 
