@@ -20,3 +20,5 @@ ls -1 $HOME/.eden/functions | while read filename
 do
   autoload -Uz $filename
 done
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
