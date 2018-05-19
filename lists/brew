@@ -10,6 +10,7 @@ contconfig
 credhub-cli
 ctags
 curl
+direnv
 fasd
 flac
 fzf
