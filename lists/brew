@@ -1,6 +1,7 @@
 aria2
 bbl
 bosh-cli
+cabal-install
 cairo
 carthage
 cf-cli
@@ -14,6 +15,7 @@ direnv
 fasd
 flac
 fzf
+ghc
 git
 git-duet
 git-extras
