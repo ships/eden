@@ -7,7 +7,7 @@ carthage
 cf-cli
 chruby
 cloc
-contconfig
+fontconfig
 credhub-cli
 ctags
 curl
