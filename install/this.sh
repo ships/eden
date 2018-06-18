@@ -2,7 +2,7 @@
 
 set -eux
 
-mkdir ~/workspace
+mkdir -p ~/workspace
 cd ~/workspace
 
 git clone https://github.com/jraqula/eden
