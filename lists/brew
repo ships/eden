@@ -35,6 +35,7 @@ python@2
 ripgrep
 ruby
 ruby-install
+sshuttle
 swiftenv
 tig
 tmux
