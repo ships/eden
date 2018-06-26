@@ -7,7 +7,6 @@ carthage
 cf-cli
 chruby
 cloc
-contconfig
 credhub-cli
 ctags
 curl
@@ -40,5 +39,6 @@ swiftenv
 tig
 tmux
 watch
+wget
 xctool
 zsh
