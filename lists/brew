@@ -13,6 +13,7 @@ curl
 direnv
 fasd
 flac
+fontconfig
 fzf
 ghc
 git
