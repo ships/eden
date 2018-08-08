@@ -7,13 +7,13 @@ carthage
 cf-cli
 chruby
 cloc
-fontconfig
 credhub-cli
 ctags
 curl
 direnv
 fasd
 flac
+fontconfig
 fzf
 ghc
 git
@@ -35,9 +35,11 @@ python@2
 ripgrep
 ruby
 ruby-install
+sshuttle
 swiftenv
 tig
 tmux
 watch
+wget
 xctool
 zsh
