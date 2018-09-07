@@ -28,7 +28,13 @@ function oh_my_zsh() {
   )"
 }
 
+function update_screencap_location {
+  defaults write com.apple.screencapture /Users/eve/Downloads
+  killall SystemUIServer
+}
+
 oh_my_zsh
 fly_cli
 concourse_bin
+update_screencap_location
 
