@@ -24,7 +24,7 @@ function concourse_bin() {
 
 function oh_my_zsh() {
   sh -c "$(curl -fsSL \
-    https://raw.githubusercontent.com/jraqula/oh-my-zsh/master/tools/install.sh
+    https://raw.githubusercontent.com/ships/oh-my-zsh/master/tools/install.sh
   )"
 }
 
