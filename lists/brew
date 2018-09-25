@@ -45,4 +45,5 @@ tmux
 watch
 wget
 xctool
+yq
 zsh
