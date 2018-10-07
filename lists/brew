@@ -24,6 +24,8 @@ graphviz
 htop
 hugo
 jq
+kops
+kubectl
 lastpass-cli
 mysql
 neovim
