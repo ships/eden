@@ -26,6 +26,7 @@ hugo
 jq
 kops
 kubectl
+kubernetes-helm
 lastpass-cli
 mysql
 neovim
