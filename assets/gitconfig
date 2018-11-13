@@ -34,7 +34,7 @@
 	editor = nvim
 [duet "env"]
 	git-author-initials = eve
-	git-author-name = J Evelyn Quintana
+	git-author-name = early evening
 	git-author-email = q@world.oberlin.edu
 	mtime = 1513050490
 [push]
