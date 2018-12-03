@@ -10,6 +10,12 @@ function install_homebrew() {
     )"
 }
 
+function brewbundle() {
+  pushd "$repo_root/assets"
+    brew bundle -v
+  popd
+}
+
 function taps() {
   cat $repo_root/lists/brew-tap | while read tap
   do
@@ -33,7 +39,4 @@ function recipes() {
 
 
 install_homebrew
-casks
-taps
-recipes
-
+brewbundle
