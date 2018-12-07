@@ -4,7 +4,7 @@
 	default = simple
 [user]
 	name = Eve
-	email = q@world.oberlin.edu
+	email = eve@haut-kultur.org
 
 [merge]
 	tool = vimdiff
@@ -35,7 +35,7 @@
 [duet "env"]
 	git-author-initials = eve
 	git-author-name = early evening
-	git-author-email = q@world.oberlin.edu
+	git-author-email = eve@haut-kultur.org
 	mtime = 1513050490
 [push]
 	default = simple
