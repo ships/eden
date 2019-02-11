@@ -1,12 +1,12 @@
 local mainFrame = function(win)
-  local max = maxFrame(win)
+  local max = win:screen():frame()
   max.x = max.x + max.w * 2/7
   max.w = max.w * 5/7
   return max
 end
 
 local trayFrame = function(win)
-  local max = maxFrame(win)
+  local max = win:screen():frame()
   max.w = max.w * 2/7
   return max
 end
