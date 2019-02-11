@@ -1,135 +1,124 @@
-rzero = function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
-
-  f.x = max.x
-  f.y = max.y
-  f.w = max.w * 2 / 7
-  f.h = max.h
-  win:setFrame(f)
+maxFrame = function(win)
+  return win:screen():frame()
 end
 
-rmax = function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
+mainFrame = function(win)
+  local max = maxFrame(win)
+  max.x = max.x + max.w * 2/7
+  max.w = max.w * 5/7
+  return max
+end
 
-  f.x = max.x + max.w * 2 / 7
-  f.y = max.y
-  f.w = max.w * 5 / 7
-  f.h = max.h
-  win:setFrame(f)
+trayFrame = function(win)
+  local max = maxFrame(win)
+  max.w = max.w * 2/7
+  return max
+end
+
+rzero = function()
+  local win = hs.window.focusedWindow()
+  local tray = trayFrame(win)
+
+  win:setFrame(tray)
+end
+
+rmain = function()
+  local win = hs.window.focusedWindow()
+  local max = mainFrame(win)
+
+  win:setFrame(max)
 end
 
 rone = function()
   local win = hs.window.focusedWindow()
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
+  local max = mainFrame(win)
 
-  f.x = max.x + max.w * 9 / 14
-  f.y = max.y
-  f.w = max.w * 5 / 14
-  f.h = max.h / 2
-  win:setFrame(f)
+  max.x = max.x + max.w / 2
+  max.y = max.y
+  max.w = max.w / 2
+  max.h = max.h / 2
+  win:setFrame(max)
 end
 
 rtwo = function()
   local win = hs.window.focusedWindow()
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
+  local max = mainFrame(win)
 
-  f.x = max.x + max.w * 2 / 7
-  f.y = max.y
-  f.w = max.w * 5 / 14
-  f.h = max.h / 2
-  win:setFrame(f)
+  max.x = max.x
+  max.y = max.y
+  max.w = max.w / 2
+  max.h = max.h / 2
+  win:setFrame(max)
 end
 
 rthree = function()
   local win = hs.window.focusedWindow()
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
+  local max = mainFrame(win)
 
-  f.x = max.x + max.w * 2 / 7
-  f.y = max.y + max.h / 2
-  f.w = max.w * 5 / 14
-  f.h = max.h / 2
-  win:setFrame(f)
+  max.x = max.x
+  max.y = max.y + max.h / 2
+  max.w = max.w / 2
+  max.h = max.h / 2
+  win:setFrame(max)
 end
 
 rfour = function()
   local win = hs.window.focusedWindow()
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
+  local max = mainFrame(win)
 
-  f.x = max.x + max.w * 9 / 14
-  f.y = max.y + max.h / 2
-  f.w = max.w * 5 / 14
-  f.h = max.h / 2
-  win:setFrame(f)
+  max.x = max.x + max.w / 2
+  max.y = max.y + max.h / 2
+  max.w = max.w / 2
+  max.h = max.h / 2
+  win:setFrame(max)
 end
 
 rleft = function()
   local win = hs.window.focusedWindow()
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
+  local max = mainFrame(win)
 
-  f.x = max.x + max.w * 2/7
-  f.y = max.y
-  f.w = max.w * 5 / 14
-  f.h = max.h
-  win:setFrame(f)
+  max.x = max.x
+  max.y = max.y
+  max.w = max.w / 2
+  max.h = max.h
+  win:setFrame(max)
 end
 
 rright = function()
   local win = hs.window.focusedWindow()
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
+  local max = mainFrame(win)
 
-  f.x = max.x + max.w * 9 / 14
-  f.y = max.y
-  f.w = max.w * 5 / 14
-  f.h = max.h
-  win:setFrame(f)
+  max.x = max.x + max.w / 2
+  max.y = max.y
+  max.w = max.w / 2
+  max.h = max.h
+  win:setFrame(max)
 end
 
 rtop = function()
   local win = hs.window.focusedWindow()
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
+  local max = mainFrame(win)
 
-  f.x = max.x + max.w * 2 / 7
-  f.y = max.y
-  f.w = max.w * 5/7
-  f.h = max.h / 2
-  win:setFrame(f)
+  max.x = max.x
+  max.y = max.y
+  max.w = max.w
+  max.h = max.h / 2
+  win:setFrame(max)
 end
 
 rbottom = function()
   local win = hs.window.focusedWindow()
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
+  local max = mainFrame(win)
 
-  f.x = max.x + max.w * 2 / 7
-  f.y = max.y + max.h / 2
-  f.w = max.w * 5/7
-  f.h = max.h / 2
-  win:setFrame(f)
+  max.x = max.x
+  max.y = max.y + max.h / 2
+  max.w = max.w
+  max.h = max.h / 2
+  win:setFrame(max)
 end
 
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "0", rzero)
-hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "M", rmax)
+hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "M", rmain)
 hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "1", rone)
 hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "2", rtwo)
 hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "3", rthree)
