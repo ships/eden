@@ -13,4 +13,5 @@ $repo_root/install/git.sh
 $repo_root/install/hammerspoon.sh
 $repo_root/install/tmux.sh
 $repo_root/install/ssh.sh
+$repo_root/install/rust.sh
 
