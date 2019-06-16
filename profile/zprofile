@@ -1,4 +1,4 @@
-export SSH_AUTH_SOCK=~/.ssh/ssh-agent.eden.sock
+export SSH_AUTH_SOCK="${HOME}/.ssh/ssh-agent.eden.sock"
 
 ssh-add -l 2>/dev/null >/dev/null 2>/dev/null
 if [ $? -ge 2 ]; then
