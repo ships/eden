@@ -4,7 +4,7 @@
 	default = simple
 [user]
 	name = Eve
-	email = eve@haut-kultur.org
+	email = eve@eatbigger.fish
 
 [merge]
 	tool = vimdiff
