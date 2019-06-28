@@ -22,3 +22,6 @@ hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "Left", xleft)
 hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "Right", xright)
 hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "Up", xtop)
 hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "Down", xbottom)
+
+ms = require('mostly_sane/mute_on_wake')
+ms.mute_on_wake()
