@@ -1,3 +1,4 @@
 export GOPATH=~/workspace/go
-export PATH="$GOPATH/bin:/usr/local/opt/go/libexec/bin:$PATH"
+export GOROOT="$(ls -d /usr/local/Cellar/go/*/libexec)"
+export PATH="$GOPATH/bin:$GOROOT/bin:$PATH"
 
