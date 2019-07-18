@@ -1,3 +1,6 @@
 [submodule "vendor/github.com/powerline/fonts"]
 	path = vendor/github.com/powerline/fonts
 	url = https://github.com/powerline/fonts
+[submodule "vendor/go.googlesource.com/image"]
+	path = vendor/go.googlesource.com/image
+	url = https://go.googlesource.com/image

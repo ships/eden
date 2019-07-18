@@ -9,11 +9,18 @@ function repo_update() {
   popd
 }
 
-function install_fonts() {
+function install_gofont() {
+  pushd $repo_root
+    cp vendor/go.googlesource.com/image/font/gofont/ttfs/*.ttf ~/Library/Fonts/
+  popd
+}
+
+function install_powerline() {
   pushd $repo_root
     vendor/github.com/powerline/fonts/install.sh
   popd
 }
 
 repo_update
-install_fonts
+install_powerline
+install_gofont
