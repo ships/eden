@@ -1,15 +1,15 @@
-ms = {}
+local mute = {}
 
-function f(event)
+function mute_watcher_callback(event)
     if event == hs.caffeinate.watcher.systemDidWake then
 			local dev = hs.audiodevice.defaultOutputDevice()
 			dev:setMuted(true)
     end
 end
 
-function ms.mute_on_wake()
-    ms.mute_on_wake_watcher = hs.caffeinate.watcher.new(f)
+function mute.enable()
+    ms.mute_on_wake_watcher = hs.caffeinate.watcher.new(mute_watcher_callback)
     ms.mute_on_wake_watcher:start()
 end
 
-return ms
+return mute
