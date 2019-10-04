@@ -28,3 +28,6 @@ ms = require('mostly_sane/ms')
 ms.mute_on_wake.enable()
 ms.bluetooth.enable()
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "B", ms.bluetooth.toggle_command)
+
+bc = require('better_content/bc')
+hs.hotkey.bind({"cmd", "alt", "ctrl"}, "V", bc.pasteboard.typeKeys)
