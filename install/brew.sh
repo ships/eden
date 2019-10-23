@@ -38,5 +38,5 @@ function recipes() {
 }
 
 
-install_homebrew
+which brew || install_homebrew
 brewbundle
