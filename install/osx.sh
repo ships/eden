@@ -3,7 +3,7 @@
 set -euxo pipefail
 repo_root="$(cd `dirname $0`/.. && pwd )"
 
-$repo_root/install/brew.sh
+$repo_root/install/brew.sh || echo "Proceeding despite some brew failures"
 $repo_root/install/misc.sh
 $repo_root/install/ruby.sh
 $repo_root/install/profile.sh
