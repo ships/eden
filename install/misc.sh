@@ -31,7 +31,7 @@ function oh_my_zsh() {
 }
 
 function update_screencap_location {
-  defaults write com.apple.screencapture "$(cd ~/Downloads && pwd)"
+  defaults write com.apple.screencapture location "$(cd ~/Downloads && pwd)"
   killall SystemUIServer
 }
 
