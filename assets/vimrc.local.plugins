@@ -2,3 +2,4 @@ let g:deoplete#sources#rust#racer_binary=systemlist('which racer')[0]
 let g:deoplete#sources#rust#rust_source_path=systemlist('echo $HOME/workspace/rust/src')[0]
 
 Plug 'godoctor/godoctor.vim'
+Plug 'vmchale/dhall-vim'
