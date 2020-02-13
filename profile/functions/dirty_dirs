@@ -1,0 +1,6 @@
+for line in `ls -1 $HOME/workspace`; do
+  dirt="$(cd $HOME/workspace/$line && git status -s)"
+  if [ ! -z "$dirt" ]; then
+    echo "$line: \n$dirt"
+  fi
+done
