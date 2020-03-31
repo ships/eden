@@ -1,0 +1,1 @@
+export PATH=$HOME/algorand-node/bin:$PATH
