@@ -1,6 +1,7 @@
 dofile("./window_management/geometry.lua")
 dofile("./window_management/tray.lua")
 dofile("./window_management/max.lua")
+dofile("./window_management/screens.lua")
 
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "0", rzero)
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "M", rmain)
@@ -23,6 +24,8 @@ hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "Right", xright)
 hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "Up", xtop)
 hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "Down", xbottom)
 
+hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "]", moveToNext)
+hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "[", moveToPrev)
 
 ms = require('mostly_sane/ms')
 ms.mute_on_wake.enable()
