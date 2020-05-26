@@ -6,25 +6,19 @@ repo_root="$(cd `dirname $0`/.. && pwd )"
 preferred_concourse_version=${PREFERRED_CONCOURSE_VERSION:-6.0.0}
 preferred_algorand_version=${PREFERRED_ALGORAND_VERSION:-2.0.5}
 
-function fly_cli() {
-  mkdir -p tmp
-  aria2c -o tmp/fly.tgz \
-    https://github.com/concourse/concourse/releases/download/v${preferred_concourse_version}/fly-${preferred_concourse_version}-darwin-amd64.tgz
-  tar -xzvf tmp/fly.tgz -C tmp
-
-  mv tmp/fly /usr/local/bin/fly
-  chmod +x /usr/local/bin/fly
-}
-
 function concourse_bin() {
   mkdir -p tmp
   aria2c -o tmp/concourse.tgz \
     https://github.com/concourse/concourse/releases/download/v${preferred_concourse_version}/concourse-${preferred_concourse_version}-darwin-amd64.tgz
   tar -xzvf tmp/concourse.tgz -C tmp
+  tar -xzvf tmp/concourse/fly-assets/fly-darwin-amd64.tgz -C tmp
 
 
-  mv tmp/concourse /usr/local/bin/concourse
+  mv tmp/concourse/bin/concourse /usr/local/bin/concourse
   chmod +x /usr/local/bin/concourse
+
+  mv tmp/fly /usr/local/bin/fly
+  chmod +x /usr/local/bin/fly
 }
 
 function algorand_bin() {
@@ -49,9 +43,15 @@ function update_screencap_location {
   killall SystemUIServer
 }
 
+function install_keydict {
+  bindings_dir="$HOME/Library/KeyBindings"
+  mkdir -p "$bindings_dir"
+  ln -s "$repo_root/vendor/KeyBindings/DefaultKeyBinding.dict" "$bindings_dir/DefaultKeyBinding.dict"
+}
+
 oh_my_zsh
 algorand_bin
-fly_cli
 concourse_bin
 update_screencap_location
+install_keydict
 

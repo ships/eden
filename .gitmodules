@@ -4,3 +4,6 @@
 [submodule "vendor/go.googlesource.com/image"]
 	path = vendor/go.googlesource.com/image
 	url = https://go.googlesource.com/image
+[submodule "vendor/KeyBindings"]
+	path = vendor/KeyBindings
+	url = https://github.com/ttscoff/KeyBindings
