@@ -44,6 +44,7 @@ function update_screencap_location {
 }
 
 function install_keydict {
+  git submodule update --init
   bindings_dir="$HOME/Library/KeyBindings"
   mkdir -p "$bindings_dir"
   ln -s "$repo_root/vendor/KeyBindings/DefaultKeyBinding.dict" "$bindings_dir/DefaultKeyBinding.dict"
