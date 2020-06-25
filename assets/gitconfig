@@ -33,6 +33,7 @@
 	nuke-branch = "!sh -c 'git branch -D $1 && git push origin --delete $1' -"
 	mq = "!sh -c 'git merge --squash $1 && git duet-commit -v' -"
 	cam = duet-commit --amend -m
+  pras = pull --rebase --autostash
 
 
 [core]
