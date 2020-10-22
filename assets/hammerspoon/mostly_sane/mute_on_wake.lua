@@ -2,8 +2,8 @@ local mute = {}
 
 function mute_watcher_callback(event)
     if event == hs.caffeinate.watcher.systemDidWake then
-			local dev = hs.audiodevice.defaultOutputDevice()
-			dev:setMuted(true)
+	local dev = hs.audiodevice.defaultOutputDevice()
+	dev:setMuted(true)
     end
 end
 
