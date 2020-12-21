@@ -2,6 +2,8 @@
 	helper = osxkeychain
 [push]
 	default = simple
+[pull]
+  ff = only
 [user]
 	name = Eve
 	email = eve@eatbigger.fish
