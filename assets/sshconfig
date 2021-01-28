@@ -2,3 +2,5 @@ Host *
   UseKeychain yes
   AddKeysToAgent yes
   IdentityAgent SSH_AUTH_SOCK
+  ControlMaster auto
+  ControlPath ~/.ssh/cm_socket/%r@%h:%p
