@@ -3,8 +3,8 @@
 set -euxo pipefail
 repo_root="$(cd `dirname $0`/.. && pwd )"
 
-preferred_concourse_version=${PREFERRED_CONCOURSE_VERSION:-6.0.0}
-preferred_algorand_version=${PREFERRED_ALGORAND_VERSION:-2.0.5}
+preferred_concourse_version=${PREFERRED_CONCOURSE_VERSION:-7.0.0}
+preferred_algorand_version=${PREFERRED_ALGORAND_VERSION:-2.4.1}
 
 function concourse_bin() {
   mkdir -p tmp
