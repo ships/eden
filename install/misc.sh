@@ -47,6 +47,7 @@ function install_keydict {
   git submodule update --init
   bindings_dir="$HOME/Library/KeyBindings"
   mkdir -p "$bindings_dir"
+  rm -f "$bindings_dir/DefaultKeyBinding.dict"
   ln -s "$repo_root/vendor/KeyBindings/DefaultKeyBinding.dict" "$bindings_dir/DefaultKeyBinding.dict"
 }
 
