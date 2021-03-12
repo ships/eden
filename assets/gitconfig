@@ -5,7 +5,7 @@
 [pull]
   ff = only
 [user]
-	name = Eve
+	name = early evening
 	email = eve@eatbigger.fish
 
 [mergetool "nvim"]
@@ -43,7 +43,7 @@
 [duet "env"]
 	git-author-initials = eve
 	git-author-name = early evening
-	git-author-email = eve@haut-kultur.org
+	git-author-email = eve@eatbigger.fish
 	mtime = 1513050490
 [push]
 	default = simple
