@@ -1,0 +1,8 @@
+s3_source=$1; shift
+prefix=$1; shift
+
+s3path="$(echo $s3_source | awk -F 's3://' '{print $2}')"
+
+set -x
+aws s3 sync "s3://$s3path" "$prefix/$s3path" "$@"
+set +x
