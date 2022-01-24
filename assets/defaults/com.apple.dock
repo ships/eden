@@ -1,0 +1,90 @@
+{
+
+    "autohide" = 1;
+    "largesize" = 59;
+    "last-messagetrace-stamp" = "621989284.639102";
+    "loc" = "en_US:US";
+    "magnification" = 1;
+    "mineffect" = genie;
+    "minimize-to-application" = 0;
+    "mod-count" = 238;
+    "mru-spaces" = 0;
+    "orientation" = bottom;
+    "persistent-apps" =     (
+                {
+
+            "GUID" = 1940511756;
+            "tile-data" =             {
+
+                "book" = {
+length = 556, bytes = 0x626f6f6b 2c020000 00000410 30000000 ... 04000000 00000000 };
+                "bundle-identifier" = "notion.id";
+                "dock-extra" = 0;
+                "file-data" =                 {
+
+                    "_CFURLString" = "file:///Applications/Notion.app/";
+                    "_CFURLStringType" = 15;
+                };
+                "file-label" = Notion;
+                "file-mod-date" = 3663697180;
+                "file-type" = 41;
+                "parent-mod-date" = 168825955402505;
+            };
+            "tile-type" = "file-tile";
+        },
+                {
+
+            "GUID" = 4066348030;
+            "tile-data" =             {
+
+                "book" = {
+length = 648, bytes = 0x626f6f6b 88020000 00000410 30000000 ... 04000000 00000000 };
+                "bundle-identifier" = "com.apple.ActivityMonitor";
+                "dock-extra" = 0;
+                "file-data" =                 {
+
+                    "_CFURLString" = "file:///System/Applications/Utilities/Activity%20Monitor.app/";
+                    "_CFURLStringType" = 15;
+                };
+                "file-label" = "Activity Monitor";
+                "file-mod-date" = 98611828121605;
+                "file-type" = 41;
+                "parent-mod-date" = 3652633363;
+            };
+            "tile-type" = "file-tile";
+        }
+    );
+    "persistent-others" =     (
+                {
+
+            "GUID" = 3174374143;
+            "tile-data" =             {
+
+                "arrangement" = 2;
+                "book" = {
+length = 664, bytes = 0x626f6f6b 98020000 00000410 30000000 ... 04000000 00000000 };
+                "displayas" = 0;
+                "file-data" =                 {
+
+                    "_CFURLString" = "file:///Users/eve/Downloads/";
+                    "_CFURLStringType" = 15;
+                };
+                "file-label" = Downloads;
+                "file-mod-date" = 75393214380889;
+                "file-type" = 2;
+                "parent-mod-date" = 13717484092192;
+                "preferreditemsize" = "-1";
+                "showas" = 1;
+            };
+            "tile-type" = "directory-tile";
+        }
+    );
+    "recent-apps" =     (
+    );
+    "region" = US;
+    "show-recents" = 0;
+    "showAppExposeGestureEnabled" = 1;
+    "tilesize" = 83;
+    "trash-full" = 1;
+    "version" = 1;
+}
