@@ -4,3 +4,4 @@ let g:deoplete#sources#rust#rust_source_path=systemlist('echo $HOME/workspace/ru
 Plug 'godoctor/godoctor.vim'
 Plug 'vmchale/dhall-vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --rust-completer --go-completer' }
+Plug 'github/copilot.vim'
