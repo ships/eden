@@ -2090,6 +2090,45 @@
             }
           }
         }
+      },
+      "mask": {
+        "version": "0.11.2",
+        "bottle": {
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core",
+          "files": {
+            "arm64_monterey": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/mask/blobs/sha256:e2c80321512808c157aa739263f16ac6497a0488c587b84abeb5690831a0ff8c",
+              "sha256": "e2c80321512808c157aa739263f16ac6497a0488c587b84abeb5690831a0ff8c"
+            },
+            "arm64_big_sur": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/mask/blobs/sha256:43388f2bac72ba6c337e96acb1a9257177e97eb807bec15d1f62106a402c5ba0",
+              "sha256": "43388f2bac72ba6c337e96acb1a9257177e97eb807bec15d1f62106a402c5ba0"
+            },
+            "monterey": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/mask/blobs/sha256:07d3bab6e155d245ac877c361093f3c109ae86b510daa4d9ede2393883b5219d",
+              "sha256": "07d3bab6e155d245ac877c361093f3c109ae86b510daa4d9ede2393883b5219d"
+            },
+            "big_sur": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/mask/blobs/sha256:1d05edf78de9bba766f6283b2c9746cd356ffed037b35b4fc20e55e8660e6c18",
+              "sha256": "1d05edf78de9bba766f6283b2c9746cd356ffed037b35b4fc20e55e8660e6c18"
+            },
+            "catalina": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/mask/blobs/sha256:8d394f2f60f398dd483c33b30213f75525ea7e7e22cfd41ba7b0b027e835f42d",
+              "sha256": "8d394f2f60f398dd483c33b30213f75525ea7e7e22cfd41ba7b0b027e835f42d"
+            },
+            "x86_64_linux": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/mask/blobs/sha256:5edff1c56e8cf96f9b89323cf02883f41a9048b9c05867c900dc177268f35a14",
+              "sha256": "5edff1c56e8cf96f9b89323cf02883f41a9048b9c05867c900dc177268f35a14"
+            }
+          }
+        }
       }
     },
     "cask": {
