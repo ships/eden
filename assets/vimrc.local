@@ -6,7 +6,8 @@ set rtp+=~/.vim/godoctor.vim
 filetype plugin indent on
 syntax on
 
-" Pass selected text to Vipe. See
+" Pass selected text to Vipe. See:
+"   https://vi.stackexchange.com/questions/11025/passing-visual-range-to-a-command-as-its-argument
 function! VipeSelectedRange() range
   " Get the line and column of the visual selection marks
   let [lnum1, col1] = getpos("'<")[1:2]
@@ -20,10 +21,10 @@ function! VipeSelectedRange() range
   " The first line might need to be trimmed if the visual selection didn't start on the first column
   let lines[0] = lines[0][col1 - 1:]
 
-  " Get the desired text
+  " Get the desired text, and break multilines into multiple commands (yuck!)
   let selectedText = join(lines, " && ")
 
-  " Do the call to tmux
+  " Do the call to Vipe
   :execute ":Vipe " . selectedText
 endfunction
 
