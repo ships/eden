@@ -21,8 +21,8 @@ function! VipeSelectedRange() range
   " The first line might need to be trimmed if the visual selection didn't start on the first column
   let lines[0] = lines[0][col1 - 1:]
 
-  " Get the desired text, and break multilines into multiple commands (yuck!)
-  let selectedText = join(lines, " && ")
+  " Get the desired text, and generate a multiline script
+  let selectedText = join(lines, "\n")
 
   " Do the call to Vipe
   :execute ":Vipe " . selectedText
