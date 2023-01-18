@@ -28,6 +28,22 @@ xfour = function()
   setWithRegion(q4)
 end
 
+widel = function()
+  setWithRegion(qw0)
+end
+wideml = function()
+  setWithRegion(qw1)
+end
+widem = function()
+  setWithRegion(qw2)
+end
+widemr = function()
+  setWithRegion(qw3)
+end
+wider = function()
+  setWithRegion(qw4)
+end
+
 xleft = function()
   setWithRegion(lsplit)
 end

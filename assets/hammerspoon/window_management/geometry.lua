@@ -62,3 +62,32 @@ bsplit = function(frame)
   split.h = frame.h / 2
   return split
 end
+
+column = function(frame, segments, i, mult)
+  mult = mult or 1
+  local col_w = frame.w / segments
+  local quadrant = frame
+
+  quadrant.w = col_w * mult
+  quadrant.h = frame.h
+  quadrant.x = frame.x + (i * col_w)
+  quadrant.y = frame.y
+
+  return quadrant
+end
+
+qw0 = function(frame)
+  return column(frame, 5, 0)
+end
+qw1 = function(frame)
+  return column(frame, 5, 1)
+end
+qw2 = function(frame)
+  return column(frame, 5, 2)
+end
+qw3 = function(frame)
+  return column(frame, 5, 3)
+end
+qw4 = function(frame)
+  return column(frame, 5, 4)
+end
