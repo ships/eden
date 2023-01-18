@@ -11,7 +11,7 @@ local trayFrame = function(win)
   return max
 end
 
-rzero = function()
+tray_0 = function()
   local win = hs.window.focusedWindow()
   win:setFrame(trayFrame(win))
 end
@@ -24,22 +24,6 @@ end
 local setWithRegion = function(reg)
   win = hs.window.focusedWindow()
   win:setFrame(reg(mainFrame(win)))
-end
-
-rone = function()
-  setWithRegion(q1)
-end
-
-rtwo = function()
-  setWithRegion(q2)
-end
-
-rthree = function()
-  setWithRegion(q3)
-end
-
-rfour = function()
-  setWithRegion(q4)
 end
 
 rleft = function()
