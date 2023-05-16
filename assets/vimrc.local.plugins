@@ -3,5 +3,15 @@ let g:deoplete#sources#rust#rust_source_path=systemlist('echo $HOME/workspace/ru
 
 Plug 'godoctor/godoctor.vim'
 Plug 'vmchale/dhall-vim'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --rust-completer --go-completer' }
-Plug 'github/copilot.vim'
+Plug 'ships/copilot.vim', { 'branch': 'develop' }
+Plug 'niklasl/vim-rdf', { 'do': 'pip3 install rdflib'}
+
+" Github Copilot settings
+" disable autocomplete suggestions
+" (allows manual request)
+let g:copilot_enabled = 0
+
+" map Ctrl+Backslash to copilot in insert mode too
+imap <C-\> <Plug>(copilot-suggest)
+
+autocmd FileType turtle setlocal commentstring=#\ %s
