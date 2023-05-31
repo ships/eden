@@ -5,6 +5,23 @@ Plug 'godoctor/godoctor.vim'
 Plug 'vmchale/dhall-vim'
 Plug 'ships/copilot.vim', { 'branch': 'develop' }
 Plug 'niklasl/vim-rdf', { 'do': 'pip3 install rdflib'}
+Plug 'madox2/vim-ai'
+
+" VimAI OpenAI settings
+let g:vim_ai_edit = {
+\  "engine": "chat",
+\  "options": {
+\    "model": "gpt-3.5-turbo",
+\    "max_tokens": 8000,
+\    "temperature": 0.3,
+\    "request_timeout": 60,
+\    "selection_boundary": "#####",
+\  },
+\  "ui": {
+\    "paste_mode": 1,
+\  },
+\}
+" vmap <C-\> :AIEdit ???
 
 " Github Copilot settings
 " disable autocomplete suggestions
