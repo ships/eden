@@ -29,3 +29,5 @@ function! VipeSelectedRange() range
 endfunction
 
 vnoremap ,x :call VipeSelectedRange()<CR>
+
+call deoplete#custom#option('num_processes', 4)
