@@ -1,0 +1,112 @@
+return {
+	{ -- colorscheme
+		"AlexvZyl/nordic.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("nordic").load(
+				-- TODO: fix the visual highlight color to be more visible
+			)
+		end,
+	},
+	{ -- provides keymap hints
+		"folke/which-key.nvim",
+		event = "VeryLazy",
+		init = function()
+			vim.opt.timeout = true
+			vim.opt.timeoutlen = 300
+		end,
+	},
+	{ -- git integrations
+		"tpope/vim-fugitive",
+	},
+	{ -- good commenting
+		"tpope/vim-commentary",
+	},
+	{ -- paired character navigation
+		"tpope/vim-unimpaired",
+	},
+	{ -- better LSP experience TODO: investigate how to use this better
+		"nvimdev/lspsaga.nvim",
+	},
+	-- REPLACED by efm autoformat: { "nvimdev/guard.nvim" },
+	{ -- sidebar for git status per line
+		"lewis6991/gitsigns.nvim",
+		config = function()
+			require("gitsigns").setup()
+		end,
+	},
+	{ -- shows status of LSP server
+		"j-hui/fidget.nvim",
+		tag = "legacy",
+		event = "LspAttach",
+	},
+	{ -- more useable nvim-tree visuals
+		"nvim-tree/nvim-web-devicons",
+		config = function()
+			require("nvim-web-devicons").setup({})
+		end,
+	},
+	{ -- fast statusbar
+		"nvim-lualine/lualine.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("lualine").setup({
+				sections = {
+					lualine_x = {
+						{
+							require("lazy.status").updates,
+							cond = require("lazy.status").has_updates,
+						},
+					},
+				},
+			})
+		end,
+	},
+	{ -- sidebar tree nav
+		"nvim-tree/nvim-tree.lua",
+		config = function()
+			require("nvim-tree").setup({
+				sort_by = "case_sensitive",
+				renderer = {
+					group_empty = true,
+				},
+				filters = {
+					dotfiles = true,
+				},
+			})
+		end,
+	},
+	{ -- highlight and autoclean whitespace
+		"ntpeters/vim-better-whitespace",
+		config = function()
+			-- TODO: make active insert line not show whitespace
+			vim.g.better_whitespace_enabled = 1
+			vim.g.strip_whitespace_on_save = 1
+			vim.g.strip_whitespace_confirm = 0
+		end,
+	},
+	{ -- shim for pure lua LSP
+		"jose-elias-alvarez/null-ls.nvim",
+	},
+	{ --better visuals for lsp categories
+		"onsails/lspkind.nvim",
+	},
+	{ -- fzf for native sort override
+		"nvim-telescope/telescope-fzf-native.nvim",
+		event = "VeryLazy",
+		build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+	},
+	-- plugins with advanced configuration
+	require("plugins/telescope").plugin,
+	require("plugins/chatgpt").plugin,
+	require("plugins/nvim-cmp").plugin,
+	require("plugins/rust-tools").plugin,
+	require("plugins/autofmt-efm").plugin,
+	require("plugins/trouble").plugin,
+	require("plugins/neotest").plugin,
+
+	-- specific language support
+	{ "niklasl/vim-rdf" },
+}
