@@ -15,11 +15,11 @@ return {
 			"nvim-neotest/neotest-vim-test",
 			"folke/neodev.nvim",
 		},
-		config = function()
-			require("neotest").setup({
-				status = {
-					signs = false,
-					virtual_text = true,
+    config = function()
+      require("neotest").setup({
+        status = {
+          signs = true,
+					virtual_text = false,
 				},
 				adapters = {
 					require("neotest-rust"),
@@ -74,6 +74,13 @@ return {
 				require("neotest").run.stop()
 			end,
 			keys = { "n", "<leader>tq", noremap },
+		},
+		{
+			desc = "Toggle tests summary panel",
+			cmd = function()
+				require("neotest").summary.toggle()
+			end,
+			keys = { "n", "<leader>ts", noremap },
 		},
 	},
 }
