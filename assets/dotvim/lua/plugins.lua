@@ -99,6 +99,10 @@ return {
 			vim.g.strip_whitespace_confirm = 0
 		end,
 	},
+	{ -- debugging binary for js/ts
+		"microsoft/vscode-js-debug",
+		build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out",
+	},
 	{ -- shim for pure lua LSP
 		"jose-elias-alvarez/null-ls.nvim",
 	},
@@ -118,6 +122,7 @@ return {
 	require("plugins/autofmt-efm").plugin,
 	require("plugins/trouble").plugin,
 	require("plugins/neotest").plugin,
+	require("plugins/dap-debugging").plugin,
 
 	-- specific language support
 	{ "niklasl/vim-rdf" },

@@ -11,6 +11,7 @@ command_center.add(require("plugins.neotest").keymap)
 command_center.add(require("plugins.telescope").keymap)
 command_center.add(require("plugins.trouble").keymap)
 command_center.add(require("plugins.chatgpt").keymap)
+command_center.add(require("plugins.dap-debugging").keymap)
 
 command_center.add({
 	{

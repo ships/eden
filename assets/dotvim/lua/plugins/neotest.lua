@@ -83,7 +83,7 @@ return {
 		{
 			desc = "Toggle tests summary panel",
 			cmd = function()
-				require("neotest").summary.toggle()
+				require("neotest").summary.toggle({})
 			end,
 			keys = { "n", "<leader>ts", noremap },
 		},
