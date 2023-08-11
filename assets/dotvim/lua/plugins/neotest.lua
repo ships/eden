@@ -15,11 +15,16 @@ return {
 			"nvim-neotest/neotest-vim-test",
 			"folke/neodev.nvim",
 		},
-    config = function()
-      require("neotest").setup({
-        status = {
-          signs = true,
+		config = function()
+			require("neotest").setup({
+				status = {
+					signs = true,
 					virtual_text = false,
+				},
+				summary = {
+					expand_errors = true,
+					follow = true,
+					animated = true,
 				},
 				adapters = {
 					require("neotest-rust"),
@@ -81,6 +86,22 @@ return {
 				require("neotest").summary.toggle()
 			end,
 			keys = { "n", "<leader>ts", noremap },
+		},
+		{
+			desc = "Run entire test suite",
+			cmd = function()
+				local n = require("neotest")
+				n.run.run({ suite = true })
+				n.summary.open()
+			end,
+			keys = { "n", "<leader>ta", noremap },
+		},
+		{
+			desc = "Re-run last test command",
+			cmd = function()
+				require("neotest").run.run_last()
+			end,
+			keys = { "n", "<leader>t<leader>", noremap },
 		},
 	},
 }
