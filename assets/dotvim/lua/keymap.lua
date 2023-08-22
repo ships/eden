@@ -85,7 +85,7 @@ command_center.add({
 		cmd = "<CMD>bp<CR>",
 		keys = {
 			"n",
-			"<leader>z",
+			"<leader>q",
 			noremap,
 		},
 	},
@@ -94,7 +94,7 @@ command_center.add({
 		cmd = "<CMD>bn<CR>",
 		keys = {
 			"n",
-			"<leader>x",
+			"<leader>w",
 			noremap,
 		},
 	},
@@ -142,8 +142,17 @@ command_center.add({
 			"<leader>/",
 		},
 	},
+	{
+		desc = "delete to end of line",
+		cmd = "<C-O>D",
+		keys = {
+			"i",
+			"<C-K>",
+		},
+	},
 })
 
+-- convenience shortcuts for hot releasing shift fast enough
 vim.api.nvim_create_user_command("W", function(opts)
 	vim.cmd("w")
 end, { nargs = 0 })

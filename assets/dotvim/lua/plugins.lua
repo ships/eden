@@ -20,6 +20,9 @@ return {
 	{ -- git integrations
 		"tpope/vim-fugitive",
 	},
+	--	{ -- lua development plugin
+	--		"bfredl/nvim-luadev",
+	--	},
 	{ -- good commenting
 		"tpope/vim-commentary",
 	},
@@ -45,6 +48,9 @@ return {
 
 				-- Install parsers synchronously (only applied to `ensure_installed`)
 				sync_install = false,
+				highlight = {
+					enable = false,
+				},
 			})
 		end,
 	},
@@ -102,9 +108,6 @@ return {
 	{ -- debugging binary for js/ts
 		"microsoft/vscode-js-debug",
 		build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out",
-	},
-	{ -- shim for pure lua LSP
-		"jose-elias-alvarez/null-ls.nvim",
 	},
 	{ --better visuals for lsp categories
 		"onsails/lspkind.nvim",
