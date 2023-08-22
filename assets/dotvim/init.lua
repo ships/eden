@@ -60,8 +60,8 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.hlsearch = true
 
--- filetype commands
+ -- filetype commands
 vim.api.nvim_create_autocmd('Filetype', {
-  pattern = { turtle },
+  pattern = { 'turtle' },
   command = 'setlocal commentstring=#\\ %s'
 })
