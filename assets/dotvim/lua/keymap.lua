@@ -114,8 +114,8 @@ command_center.add({
 		keys = {
 			"n",
 			"<leader>sv",
-    },
-  },
+		},
+	},
 	{
 		desc = "close split",
 		cmd = "<CMD>close<CR>",
@@ -150,6 +150,16 @@ command_center.add({
 			"<C-K>",
 		},
 	},
+	{
+		desc = "toggle wrap",
+		cmd = function()
+			vim.wo.wrap = not vim.wo.wrap
+		end,
+		keys = {
+			"n",
+			"<Space>w",
+		},
+	},
 })
 
 -- convenience shortcuts for hot releasing shift fast enough
@@ -167,4 +177,3 @@ end, { nargs = 0 })
 vim.api.nvim_create_user_command("Q", function(opts)
 	vim.cmd("q")
 end, { nargs = 0 })
-
