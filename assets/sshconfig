@@ -4,3 +4,7 @@ Host *
   IdentityAgent SSH_AUTH_SOCK
   ControlMaster auto
   ControlPath ~/.ssh/cm_socket/%r@%h:%p
+
+Host remarkable.local
+  HostKeyAlgorithms = +ssh-rsa
+  PubkeyAcceptedAlgorithms = +ssh-rsa
