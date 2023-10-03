@@ -125,7 +125,7 @@ command_center.add({
 		},
 	},
 
-  -- commenting
+	-- commenting
 	{
 		desc = "comment toggle current line",
 		cmd = "<CMD>Commentary<CR>",

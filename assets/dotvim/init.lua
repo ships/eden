@@ -22,9 +22,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup(require("plugins"), {
-  defaults = {
-    lazy = false -- default lazy everything?
-  }
+	defaults = {
+		lazy = false, -- default lazy everything?
+	},
 })
 
 -- config modules
@@ -47,7 +47,8 @@ vim.opt.backupdir = "~/.vim-tmp,~/tmp,/var/tmp,/tmp"
 vim.opt.number = true
 vim.opt.encoding = "utf-8"
 vim.opt.guioptions = "cg"
-vim.opt.guicursor = "n-v-c:block-Cursor-blinkon0,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver25-Cursor,r-cr:hor20-Cursor,sm:block-Cursor-blinkwait175-blinkoff150-blinkon175"
+vim.opt.guicursor =
+	"n-v-c:block-Cursor-blinkon0,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver25-Cursor,r-cr:hor20-Cursor,sm:block-Cursor-blinkwait175-blinkoff150-blinkon175"
 vim.opt.lazyredraw = true
 
 vim.opt.autowriteall = true
@@ -64,8 +65,8 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.hlsearch = true
 
- -- filetype commands
-vim.api.nvim_create_autocmd('Filetype', {
-  pattern = { 'turtle' },
-  command = 'setlocal commentstring=#\\ %s'
+-- filetype commands
+vim.api.nvim_create_autocmd("Filetype", {
+	pattern = { "turtle" },
+	command = "setlocal commentstring=#\\ %s",
 })
