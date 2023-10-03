@@ -65,6 +65,10 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.hlsearch = true
 
+vim.o.foldlevelstart = 99
+vim.o.foldmethod = "syntax"
+vim.o.foldenable = true
+
 -- filetype commands
 vim.api.nvim_create_autocmd("Filetype", {
 	pattern = { "turtle" },
