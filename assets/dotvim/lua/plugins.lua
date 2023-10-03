@@ -117,6 +117,25 @@ return {
 		event = "VeryLazy",
 		build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
 	},
+	{ -- command palette
+		"FeiyouG/commander.nvim",
+		dependencies = {
+			"nvim-telescope/telescope.nvim",
+		},
+		config = function()
+			require("commander").setup({
+				integration = {
+					telescope = {
+						enable = true,
+					},
+				},
+				lazy = {
+					enable = true,
+					--set_plugin_name_as_cat = true,
+				},
+			})
+		end,
+	},
 	-- plugins with advanced configuration
 	require("plugins/telescope").plugin,
 	require("plugins/chatgpt").plugin,

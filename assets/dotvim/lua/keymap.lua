@@ -1,10 +1,10 @@
-local command_center = require("command_center")
+local command_center = require("commander")
 local noremap = { noremap = true }
 local silent_noremap = { noremap = true, silent = true }
 
 -- base command center shortcut
 
-vim.keymap.set("n", "<C-K>", ":Telescope command_center<CR>", { noremap = true, desc = "Open fuzzy commander" })
+vim.keymap.set("n", "<C-K>", ":Telescope commander<CR>", { noremap = true, desc = "Open fuzzy commander" })
 
 -- keymaps for plugins
 command_center.add(require("plugins.neotest").keymap)

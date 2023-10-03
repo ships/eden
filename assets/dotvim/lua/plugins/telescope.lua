@@ -3,12 +3,13 @@ local noremap = { noremap = true }
 return {
 	plugin = { -- jumpy navigation using fzf and other search tools
 		"nvim-telescope/telescope.nvim",
+		branch = "0.1.x",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"nvim-telescope/telescope-fzf-native.nvim",
 			"gbrlsnchs/telescope-lsp-handlers.nvim",
 			"nvim-tree/nvim-web-devicons",
-			"FeiyouG/command_center.nvim",
+			"FeiyouG/commander.nvim",
 			"folke/trouble.nvim",
 			"nvim-telescope/telescope-file-browser.nvim",
 		},
@@ -33,7 +34,7 @@ return {
 			})
 			t.load_extension("file_browser")
 			t.load_extension("lsp_handlers")
-			t.load_extension("command_center")
+			t.load_extension("commander")
 			t.load_extension("fzf")
 		end,
 	},

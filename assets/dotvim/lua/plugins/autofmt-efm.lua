@@ -46,7 +46,7 @@ return {
 		"creativenull/efmls-configs-nvim",
 		dependencies = {
 			"neovim/nvim-lspconfig",
-			"FeiyouG/command_center.nvim",
+			"FeiyouG/commander.nvim",
 		},
 		config = function()
 			local efmls = require("efmls-configs")
