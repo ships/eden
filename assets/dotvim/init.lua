@@ -65,6 +65,9 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.hlsearch = true
 
+vim.opt.undofile = true
+vim.opt.undodir = "~/.vim/.undo"
+
 vim.o.foldlevelstart = 99
 vim.o.foldmethod = "syntax"
 vim.o.foldenable = true
