@@ -1,5 +1,5 @@
 local on_attach = function(client, bufnr)
-	local command_center = require("command_center")
+	local command_center = require("commander")
 
 	local filter = function(client)
 		return client.name == "efm"
