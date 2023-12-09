@@ -5,18 +5,31 @@ ZSH_THEME="jraqula"
 DEFAULT_USER=`whoami`
 COMPLETION_WAITING_DOTS="true"
 
+plat=$(uname | tr '[:upper:]' '[:lower:]')
+
 plugins=(git)
 fpath=( ~/.eden/functions "${fpath[@]}" )
 
 source $ZSH/oh-my-zsh.sh
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 
-ls -d1 $HOME/.eden/sources/* | while read document
+ls -d1 $HOME/.eden/shared/sources/* | while read document
 do
   source $document
 done
 
-ls -1 $HOME/.eden/functions | while read filename
+ls -d1 $HOME/.eden/${plat}/sources/* | while read document
+do
+  source $document
+done
+
+
+ls -1 $HOME/.eden/shared/functions | while read filename
+do
+  autoload -Uz $filename
+done
+
+ls -1 $HOME/.eden/${plat}/functions | while read filename
 do
   autoload -Uz $filename
 done
@@ -25,14 +38,14 @@ done
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/usr/local/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/eve/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
-        . "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+    if [ -f "/home/eve/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/eve/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/usr/local/Caskroom/miniconda/base/bin:$PATH"
+        export PATH="/home/eve/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
