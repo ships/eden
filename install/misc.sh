@@ -33,9 +33,8 @@ function algorand_bin() {
 }
 
 function oh_my_zsh() {
-  sh -c "$(curl -fsSL \
-    https://raw.githubusercontent.com/ships/oh-my-zsh/master/tools/install.sh
-  )"
+  git clone https://github.com/ohmyzsh/ohmyzsh.git $HOME/.oh-my-zsh
+  ln -sf $repo_root/assets/ships.zsh-theme ~/.oh-my-zsh/custom/themes
 }
 
 function update_screencap_location {
