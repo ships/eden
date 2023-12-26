@@ -1,2 +1,2 @@
-export GOROOT="$(ls -d /usr/local/Cellar/go/*/libexec)"
+export GOROOT="$(ls -d /opt/homebrew/Cellar/go/*/libexec)"
 export PATH="$GOROOT/bin:$PATH"
