@@ -19,7 +19,7 @@ end
 config.color_scheme = 'Pixiefloss (Gogh)'
 
 -- Fonts
-config.font = wezterm.font 'FiraCode Nerd Font'
+config.font = wezterm.font 'SauceCodePro Nerd Font'
 
 -- and finally, return the configuration to wezterm
 return config
