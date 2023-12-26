@@ -4,3 +4,5 @@ ssh-add -l 2>/dev/null >/dev/null 2>/dev/null
 if [ $? -ge 2 ]; then
   ssh-agent -a "$SSH_AUTH_SOCK" >/dev/null 2>/dev/null
 fi
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
