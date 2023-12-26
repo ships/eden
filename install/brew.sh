@@ -8,10 +8,7 @@ repo_root="$(cd `dirname $0`/.. && pwd )"
 
 # Function to install Homebrew
 function install_homebrew() {
-  /usr/bin/ruby -e \
-    "$( curl -fsSL \
-        https://raw.githubusercontent.com/Homebrew/install/master/install
-    )"
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 }
 
 # Function to install Homebrew packages and apps from a Brewfile
