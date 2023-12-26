@@ -7,5 +7,3 @@ ln -sf "$repo_root/profile/zshrc" ~/.zshrc
 ln -sf "$repo_root/profile/zprofile" ~/.zprofile
 ln -sf "$repo_root/profile" ~/.eden
 
-open $repo_root/assets/eden.itermcolors
-

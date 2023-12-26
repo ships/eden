@@ -33,7 +33,7 @@ function algorand_bin() {
 }
 
 function oh_my_zsh() {
-  git clone https://github.com/ohmyzsh/ohmyzsh.git $HOME/.oh-my-zsh
+  if [ ! -e $HOME/.oh-my-zsh ]; then git clone https://github.com/ohmyzsh/ohmyzsh.git $HOME/.oh-my-zsh; fi
   ln -sf $repo_root/assets/ships.zsh-theme ~/.oh-my-zsh/custom/themes
 }
 
@@ -51,8 +51,8 @@ function install_keydict {
 }
 
 oh_my_zsh
-algorand_bin
-concourse_bin
+#algorand_bin
+#concourse_bin
 update_screencap_location
 install_keydict
 
