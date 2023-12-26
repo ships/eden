@@ -89,6 +89,8 @@ cask "teensy"
 cask "texshop"
 cask "tunnelblick"
 cask "vlc"
+cask "visual-studio-code"
 cask "wezterm"
 cask "zoom"
 mas "1Password", id: 1333542190
+mas "WhatsApp", id: 310633997
