@@ -20,6 +20,26 @@ config.color_scheme = 'Pixiefloss (Gogh)'
 
 -- Fonts
 config.font = wezterm.font 'SauceCodePro Nerd Font'
+config.font_size = 14.0
+
+-- keymap
+config.keys = {
+  {
+    key = '\\',
+    mods = 'CTRL|ALT',
+    action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
+  },
+  {
+    key = '-',
+    mods = 'CTRL|ALT',
+    action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' },
+  },
+  {
+    key = 'd',
+    mods = 'CTRL|ALT',
+    action = wezterm.action.CloseCurrentPane { confirm = true },
+  },
+}
 
 -- and finally, return the configuration to wezterm
 return config
