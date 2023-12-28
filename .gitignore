@@ -1,3 +1,5 @@
+assets/Brewfile.lock
+
 tmp
-profile/sources/ignored
+profile/shared/sources/ignored
 .DS_Store
