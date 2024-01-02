@@ -2,7 +2,7 @@ local bt = {}
 
 function bluetooth_watcher_callback(event)
     if event == hs.caffeinate.watcher.systemWillSleep then
-	local disableTask = hs.task.new("/usr/local/bin/blueutil", nil, {"-p", "0"})
+	local disableTask = hs.task.new("/opt/homebrew/bin/blueutil", nil, {"-p", "0"})
 	disableTask:start()
     end
 end
@@ -13,7 +13,7 @@ function bt.enable()
 end
 
 function bt.toggle_command()
-    local disableTask = hs.task.new("/usr/local/bin/blueutil", nil, {"-p", "toggle"})
+    local disableTask = hs.task.new("/opt/homebrew/bin/blueutil", nil, {"-p", "toggle"})
     disableTask:start()
 end
 
