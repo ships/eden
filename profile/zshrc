@@ -8,7 +8,9 @@ COMPLETION_WAITING_DOTS="true"
 plat=$(uname | tr '[:upper:]' '[:lower:]')
 
 plugins=(git)
-fpath=( ~/.eden/functions "${fpath[@]}" )
+fpath=( ~/.eden/${plat}/functions ~/.eden/shared/functions "${fpath[@]}" )
+
+setopt PUSHDSILENT
 
 source $ZSH/oh-my-zsh.sh
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
@@ -24,12 +26,16 @@ do
 done
 
 
-ls -1 $HOME/.eden/shared/functions | while read filename
-do
-  autoload -Uz $filename
-done
+pushd $HOME/.eden/shared/functions
+  ls -1 | while read filename
+  do
+    autoload -Uz $filename
+  done
+popd
 
-ls -1 $HOME/.eden/${plat}/functions | while read filename
-do
-  autoload -Uz $filename
-done
+pushd $HOME/.eden/${plat}/functions
+  ls -1 | while read filename
+  do
+    autoload -Uz $filename
+  done
+popd
