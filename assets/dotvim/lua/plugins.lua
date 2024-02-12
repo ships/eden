@@ -136,6 +136,10 @@ return {
 			})
 		end,
 	},
+  { -- terraform syntax highlighting
+    "hashivim/vim-terraform",
+    ft = { 'hcl', 'tf', 'tfbackend', 'tfvars', 'terraform' },
+  },
 	-- plugins with advanced configuration
 	require("plugins/telescope").plugin,
 	require("plugins/chatgpt").plugin,
