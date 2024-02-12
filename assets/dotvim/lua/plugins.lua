@@ -91,7 +91,7 @@ return {
 					group_empty = true,
 				},
 				filters = {
-					dotfiles = true,
+					git_ignored = false
 				},
 			})
 		end,
