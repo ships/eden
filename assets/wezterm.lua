@@ -2,6 +2,7 @@
 --
 -- Pull in the wezterm API
 local wezterm = require 'wezterm'
+local act = wezterm.action
 
 -- This table will hold the configuration.
 local config = {}
@@ -24,11 +25,13 @@ config.font_size = 14.0
 
 -- keymap
 config.keys = {
+  -- Pipe to split vertical
   {
     key = '\\',
     mods = 'CTRL|ALT',
     action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
   },
+  -- dash to split horizontal
   {
     key = '-',
     mods = 'CTRL|ALT',
@@ -39,6 +42,10 @@ config.keys = {
     mods = 'CTRL|ALT',
     action = wezterm.action.CloseCurrentPane { confirm = true },
   },
+  -- Make Option-Left equivalent to Alt-b which many line editors interpret as backward-word
+  { key = 'LeftArrow', mods = 'OPT', action = act.SendString '\x1bb' },
+  -- Make Option-Right equivalent to Alt-f; forward-word
+  { key = 'RightArrow', mods = 'OPT', action = act.SendString '\x1bf' },
 }
 
 -- and finally, return the configuration to wezterm
