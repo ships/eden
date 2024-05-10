@@ -95,3 +95,7 @@ cask "wezterm"
 cask "zoom"
 mas "1Password", id: 1333542190
 mas "WhatsApp", id: 310633997
+mas "Fantastical", id: 975937182
+mas "WireGuard", id: 1451685025
+mas "Amphetamine", id: 937984704
+mas "reMarkable", id: 1276493162
