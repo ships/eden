@@ -12,7 +12,7 @@
     packages.${system}.vm = pkgs.darwin.linux-builder.override {
       modules = [
         ({ lib, ... }: {
-          nix.settings.sandbox = false;
+          # nix.settings.sandbox = false;
         })
       ];
     };
