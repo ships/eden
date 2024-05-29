@@ -3,3 +3,6 @@ assets/Brewfile.lock
 tmp
 profile/shared/sources/ignored
 .DS_Store
+
+nix/linux-builder/keys
+nix/linux-builder/nixos.qcow2
