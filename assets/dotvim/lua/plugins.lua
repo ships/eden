@@ -152,4 +152,5 @@ return {
 
 	-- specific language support
 	{ "niklasl/vim-rdf" },
+	{ "LnL7/vim-nix" },
 }
