@@ -69,6 +69,15 @@ command_center.add({
 			noremap,
 		},
 	},
+	{
+		desc = "Paste",
+		cmd = "P",
+		keys = {
+			"v",
+			"p",
+			noremap,
+		},
+	},
 
 	-- buffer management
 	{
