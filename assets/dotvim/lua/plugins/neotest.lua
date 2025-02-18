@@ -2,6 +2,7 @@ return {
 	plugin = {
 		"nvim-neotest/neotest",
 		dependencies = {
+      "nvim-neotest/nvim-nio",
 			"nvim-treesitter/nvim-treesitter",
 			"mfussenegger/nvim-dap",
 			"tpope/vim-dispatch",

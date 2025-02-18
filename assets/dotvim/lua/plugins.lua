@@ -29,6 +29,9 @@ return {
 	{ -- paired character navigation
 		"tpope/vim-unimpaired",
 	},
+    { -- ruby on rails basics
+      "tpope/vim-rails"
+    },
 	{ -- better LSP experience TODO: investigate how to use this better
 		"nvimdev/lspsaga.nvim",
 	},
@@ -149,6 +152,7 @@ return {
 	require("plugins/trouble").plugin,
 	require("plugins/neotest").plugin,
 	require("plugins/dap-debugging").plugin,
+	require("plugins/conjure").plugin,
 
 	-- specific language support
 	{ "niklasl/vim-rdf" },

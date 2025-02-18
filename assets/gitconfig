@@ -6,7 +6,8 @@
   ff = only
 [user]
 	name = eve n.u.
-	email = eve@eatbigger.fish
+	email = eve@saferdata.io
+	signingkey = A11DE0D5
 
 [mergetool "nvim"]
   cmd = nvim -f -c \"Gvdiffsplit!\" \"$MERGED\"
@@ -43,7 +44,7 @@
 [duet "env"]
 	git-author-initials = eve
 	git-author-name = eve n.u.
-	git-author-email = eve@eatbigger.fish
+	git-author-email = eve@saferdata.io
 	mtime = 1513050490
 [push]
 	default = simple
@@ -52,3 +53,7 @@
 	insteadOf = git://github.com/
 [init]
 	defaultBranch = main
+[commit]
+	gpgsign = true
+[gpg]
+	program = /opt/homebrew/bin/gpg
