@@ -6,8 +6,8 @@
   ff = only
 [user]
 	name = eve n.u.
-	email = eve@saferdata.io
-	signingkey = A11DE0D5
+	email = ships@users.noreply.github.com
+	signingkey = DE5EE752
 
 [mergetool "nvim"]
   cmd = nvim -f -c \"Gvdiffsplit!\" \"$MERGED\"
@@ -44,7 +44,7 @@
 [duet "env"]
 	git-author-initials = eve
 	git-author-name = eve n.u.
-	git-author-email = eve@saferdata.io
+	git-author-email = ships@users.noreply.github.com
 	mtime = 1513050490
 [push]
 	default = simple
