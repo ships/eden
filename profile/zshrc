@@ -5,6 +5,8 @@ ZSH_THEME="ships"
 DEFAULT_USER=`whoami`
 COMPLETION_WAITING_DOTS="true"
 
+# Load source-controlled configs
+
 plat=$(uname | tr '[:upper:]' '[:lower:]')
 
 plugins=(git)
@@ -39,3 +41,7 @@ pushd $HOME/.eden/${plat}/functions
     autoload -Uz $filename
   done
 popd
+
+#### THIS MACHINE ONLY
+# below this block, programs that ad-hoc make changes to shell
+# can be kept ephemeral. Nothing below this line should be checked in.

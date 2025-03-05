@@ -5,7 +5,6 @@ repo_root="$(cd `dirname $0`/.. && pwd )"
 
 $repo_root/install/brew.sh || echo "Proceeding despite some brew failures"
 $repo_root/install/misc.sh
-$repo_root/install/ruby.sh
 $repo_root/install/profile.sh
 $repo_root/install/fonts.sh
 $repo_root/install/vim.sh
