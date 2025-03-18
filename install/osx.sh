@@ -10,7 +10,6 @@ $repo_root/install/misc.sh
 $repo_root/install/profile.sh
 $repo_root/install/fonts.sh
 $repo_root/install/vim.sh
-$repo_root/install/conda.sh
 $repo_root/install/git.sh
 $repo_root/install/hammerspoon.sh
 $repo_root/install/tmux.sh
