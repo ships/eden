@@ -16,8 +16,4 @@ $repo_root/install/hammerspoon.sh
 $repo_root/install/tmux.sh
 $repo_root/install/ssh.sh
 $repo_root/install/rust.sh
-
-ln -sf /usr/bin/python3 /usr/local/bin/python
-python -m ensurepip
-python -m pip install --upgrade pip
-python -m pip install neovim
+$repo_root/install/python.sh
