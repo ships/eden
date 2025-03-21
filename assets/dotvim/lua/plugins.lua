@@ -35,6 +35,16 @@ return {
 	{ -- better LSP experience TODO: investigate how to use this better
 		"nvimdev/lspsaga.nvim",
 	},
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "debugpy",
+        "ruff-lsp",
+        "pyright",
+      },
+    },
+  },
 	-- REPLACED by efm autoformat: { "nvimdev/guard.nvim" },
 	{ -- sidebar for git status per line
 		"lewis6991/gitsigns.nvim",
