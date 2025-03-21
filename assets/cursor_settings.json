@@ -1,0 +1,15 @@
+{
+    "window.commandCenter": 1,
+    "editor.fontFamily": "SauceCodePro, Menlo, Monaco, 'Courier New', monospace",
+    "editor.minimap.enabled": true,
+    "editor.fontLigatures": false,
+    "workbench.colorTheme": "Solarized Dark",
+    "workbench.preferredDarkColorTheme": "Solarized Dark",
+    "testing.followRunningTest": true,
+    "git.autofetch": true,
+    "editor.autoClosingBrackets": "beforeWhitespace",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "terminal.integrated.enableMultiLinePasteWarning": false
+}
