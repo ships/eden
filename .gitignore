@@ -1,4 +1,5 @@
 assets/Brewfile.lock
+assets/dotvim/lazy-lock.json
 
 tmp
 profile/shared/sources/ignored
