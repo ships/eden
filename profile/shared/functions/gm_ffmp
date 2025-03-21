@@ -1,0 +1,4 @@
+branch="$(git branch --show-current)"
+git checkout main
+git pull --rebase --autostash
+git merge --ff-only "$branch"
