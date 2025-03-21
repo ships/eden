@@ -152,6 +152,7 @@ return {
 	require("plugins/trouble").plugin,
 	require("plugins/neotest").plugin,
 	require("plugins/dap-debugging").plugin,
+	require("plugins/venv-selector").plugin,
 
 	-- specific language support
 	{ "niklasl/vim-rdf" },
