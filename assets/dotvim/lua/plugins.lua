@@ -110,7 +110,7 @@ return {
 	},
 	{ -- debugging binary for js/ts
 		"microsoft/vscode-js-debug",
-		build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out",
+		build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out && git checkout .",
 	},
 	{ --better visuals for lsp categories
 		"onsails/lspkind.nvim",
