@@ -1,10 +1,19 @@
 local dim = {}
 
 function dim_watcher_callback(event)
-    if event == hs.caffeinate.watcher.systemDidWake then
-	local dev = hs.screen.primaryScreen()
-	dev:setBrightness(0.1)
+  if event == hs.caffeinate.watcher.systemDidWake then
+    local ss = hs.screen.allScreens()
+
+    for i,s in ipairs(ss) do
+      local n = s:name()
+      local f = n:find("Retina Display")
+      if f then
+        s:setBrightness(0.1)
+      else
+        print("Screen was called: " .. n .. "; found=", f)
+      end
     end
+  end
 end
 
 function dim.enable()
