@@ -9,7 +9,7 @@ COMPLETION_WAITING_DOTS="true"
 
 plat=$(uname | tr '[:upper:]' '[:lower:]')
 
-plugins=(git)
+plugins=(git z)
 fpath=( ~/.eden/${plat}/functions ~/.eden/shared/functions "${fpath[@]}" )
 
 setopt PUSHDSILENT
