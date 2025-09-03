@@ -59,7 +59,7 @@ config.mouse_bindings = {
   {
     event = { Up = { streak = 1, button = 'Left' } },
     mods = 'NONE',
-    action = act.CompleteSelection 'ClipboardAndPrimarySelection',
+    action = wezterm.action.Nop,
   },
 
   -- Bind 'Up' event of CTRL-Click to open hyperlinks
