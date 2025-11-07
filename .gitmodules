@@ -7,3 +7,6 @@
 [submodule "vendor/KeyBindings"]
 	path = vendor/KeyBindings
 	url = https://github.com/ttscoff/KeyBindings
+[submodule "vendor/skills"]
+	path = vendor/skills
+	url = https://github.com/anthropics/skills.git

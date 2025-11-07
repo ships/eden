@@ -42,6 +42,7 @@
 
 [core]
 	editor = nvim
+  excludesfile = ~/.config/git/ignore
 [duet "env"]
 	git-author-initials = eve
 	git-author-name = eve n.u.
