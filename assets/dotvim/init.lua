@@ -9,7 +9,7 @@ vim.g.mapleader = ","
 
 -- setup lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
+if not vim.uv.fs_stat(lazypath) then
 	vim.fn.system({
 		"git",
 		"clone",
@@ -66,9 +66,9 @@ vim.opt.hlsearch = true
 
 vim.opt.undofile = true
 
-vim.o.foldlevelstart = 99
-vim.o.foldmethod = "syntax"
-vim.o.foldenable = true
+vim.opt.foldlevelstart = 99
+vim.opt.foldmethod = "syntax"
+vim.opt.foldenable = true
 
 -- filetype commands
 vim.api.nvim_create_autocmd("Filetype", {

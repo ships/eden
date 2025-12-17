@@ -1,7 +1,8 @@
+local noremap = { noremap = true }
+
 return {
 	plugin = {
     'linux-cultist/venv-selector.nvim',
-    branch = "regexp",
     dependencies = {
       'neovim/nvim-lspconfig',
       'nvim-telescope/telescope.nvim',

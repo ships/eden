@@ -10,7 +10,6 @@ vim.keymap.set("n", "<C-K>", ":Telescope commander<CR>", { noremap = true, desc 
 command_center.add(require("plugins.neotest").keymap)
 command_center.add(require("plugins.telescope").keymap)
 command_center.add(require("plugins.trouble").keymap)
-command_center.add(require("plugins.chatgpt").keymap)
 command_center.add(require("plugins.dap-debugging").keymap)
 command_center.add(require("plugins.venv-selector").keymap)
 

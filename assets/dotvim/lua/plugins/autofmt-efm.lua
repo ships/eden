@@ -72,7 +72,8 @@ return {
 				},
 			}
 
-			require("lspconfig").efm.setup(vim.tbl_extend("force", efmls_config, {}))
+			vim.lsp.config("efm", efmls_config)
+			vim.lsp.enable("efm")
 		end,
 	},
 }

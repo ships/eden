@@ -1,3 +1,5 @@
+local noremap = { noremap = true }
+
 return {
 	plugin = { -- fancy navigation around quickfix/errors/diagnostics
 		"folke/trouble.nvim",
