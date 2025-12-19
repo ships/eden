@@ -16,7 +16,7 @@ command_center.add(require("plugins.venv-selector").keymap)
 command_center.add({
 	{
 		-- ... and for different modes
-		desc = "Show function signaure (hover)",
+		desc = "Show function signature (hover)",
 		cmd = "<CMD>lua vim.lsp.buf.hover()<CR>",
 		keys = {
 			{ "n", "K", silent_noremap },

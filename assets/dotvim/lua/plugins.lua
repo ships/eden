@@ -37,13 +37,22 @@ return {
 	},
   {
     "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "debugpy",
-        "ruff-lsp",
-        "pyright",
-      },
-    },
+    config = function()
+      require("mason").setup()
+    end,
+  },
+  {
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    dependencies = { "williamboman/mason.nvim" },
+    config = function()
+      require("mason-tool-installer").setup({
+        ensure_installed = {
+          "debugpy",
+          "ruff-lsp",
+          "pyright",
+        },
+      })
+    end,
   },
 	-- REPLACED by efm autoformat: { "nvimdev/guard.nvim" },
 	{ -- sidebar for git status per line

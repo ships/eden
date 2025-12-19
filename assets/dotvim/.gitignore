@@ -1,0 +1,11 @@
+# Neovim generated files
+.netrwhist
+spell/
+undo/
+sessions/
+
+# Local overrides
+local.lua
+
+# Claude Code
+.claude/

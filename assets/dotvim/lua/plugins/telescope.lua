@@ -3,7 +3,6 @@ local noremap = { noremap = true }
 return {
 	plugin = { -- jumpy navigation using fzf and other search tools
 		"nvim-telescope/telescope.nvim",
-		branch = "0.1.x",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"nvim-telescope/telescope-fzf-native.nvim",
